@@ -127,6 +127,9 @@ export const StatCard = styled.div<{ $background: string }>`
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   &::before {
     content: '';
@@ -193,7 +196,7 @@ export const StatCard = styled.div<{ $background: string }>`
 `;
 
 export const StatTitle = styled.h3`
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   margin-bottom: 0.75rem;
   opacity: 0.95;
   font-weight: 600;
@@ -202,31 +205,24 @@ export const StatTitle = styled.h3`
 `;
 
 export const StatDescription = styled.p`
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  margin-bottom: auto;
   margin-top: 0.5rem;
-  opacity: 0.7;
+  opacity: 0.8;
   line-height: 1.6;
 `;
 
 export const StatValue = styled.div`
   font-size: 3.5rem;
   font-weight: 700;
-  margin-top: 1rem;
   letter-spacing: -0.02em;
   position: relative;
-  display: inline-block;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, #8B5CF6, transparent);
-    border-radius: 2px;
-  }
+  display: block;
+  text-align: left;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+  width: fit-content;
+  margin-top: 1.5rem;
 
   ${StatCard}:hover & {
     transform: scale(1.05);
@@ -234,7 +230,7 @@ export const StatValue = styled.div`
   }
 
   @media (max-width: 1024px) {
-    font-size: 2.75rem;
+    font-size: 3rem;
   }
 
   @media (max-width: 768px) {
