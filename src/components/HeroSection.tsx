@@ -39,11 +39,11 @@ const HeroSection: React.FC = () => {
         </HeroDescription>
         <Tagline>We specialize in serving merchants who acquire customers through <strong style={{color: '#A78BFA'}}>retail channels</strong>. Our decline recovery technology is optimized for businesses using brick-and-mortar stores, point-of-sale systems, and in-store acquisition flows.</Tagline>
         <CTAButtonGroup>
-          <CTAButtonPrimary onClick={handleRequestDemo}>
+          {/* <CTAButtonPrimary onClick={handleRequestDemo}>
             Request a Demo
-          </CTAButtonPrimary>
+          </CTAButtonPrimary> */}
           <CTAButtonSecondary onClick={handleSpeakToSales}>
-            Speak to Sales
+            Schedule a Call
           </CTAButtonSecondary>
         </CTAButtonGroup>
         <Highlight>We serve only retail clients.</Highlight>
